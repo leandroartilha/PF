@@ -7,7 +7,8 @@ public IActionResult CriarTreino(int alunoId, [FromBody] TreinoRequest treinoReq
         // Ponto 2: Retorna NotFound se o aluno não existir
         return NotFound("Aluno não encontrado");
     }
-
+    else
+    {
     // Ponto 3: Cria um novo treino
     Treino treino = new Treino
     {
@@ -22,6 +23,8 @@ public IActionResult CriarTreino(int alunoId, [FromBody] TreinoRequest treinoReq
 
     // Ponto 5: Salva o treino na lista de treinos
     _treinos.Add(treino);
+    }
+
 
     // Ponto 6: Retorna Ok com o treino criado
     return Ok(treino);
