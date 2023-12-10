@@ -58,14 +58,11 @@ public List<PersonalTrainer> FiltrarPersonalTrainersComplexo(double distancia, i
                             personalFiltrados.Add(personal);
 
                             // Caso especial: Se o nível for "Intermediário", aplicar filtro adicional
-                            if (personal.Nivel.ToLower() == "intermediário")
+                            if (personal.Nivel.ToLower() == "intermediario" || personal.Nivel.ToLower() == "avancado")
                             {
-                                // Executa outra lógica complexa aqui
-                                if (OutraLogicaComplexa())
-                                {
                                     // Adiciona novamente o personal à lista de personal trainers filtrados
                                     personalFiltrados.Add(personal);
-                                }
+                                
                             }
                         }
                     }
